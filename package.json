@@ -5,8 +5,11 @@
   "bin": {
     "electrify": "bin/cli.js"
   },
-  "engines": {
-    "node": ">=4.0.0"
+  "scripts": {
+    "preinstall": "npx npm-force-resolutions"
+  },
+  "resolutions": {
+    "graceful-fs": "4.2.4"
   },
   "files": [
     "bin",
@@ -20,12 +23,12 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^2.20.0",
-    "electron": "^3.1.12",
-    "electron-packager": "^13.1.1",
+    "electron": "9.1.1",
+    "electron-packager": "15.0.0",
     "fs-extra": "^4.0.0",
     "lodash": "^4.17.14",
     "server-destroy": "^1.0.1",
-    "shelljs": "^0.7.8",
+    "shelljs": "^0.8.4",
     "sockjs": "^0.3.15"
   },
   "devDependencies": {

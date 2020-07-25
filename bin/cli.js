@@ -7,6 +7,7 @@ var program = require('commander');
 var spawn = require('child_process').spawn;
 var log = console.log;
 var _ = require('lodash');
+var shell = require('shelljs');
 
 program
   .usage('[command] [options]')
@@ -131,7 +132,8 @@ function electrify() {
   if (program.output && !fs.existsSync(program.output)) {
     console.log('output folder doesn\'t exist\n  ' + program.output);
     console.log('  creating one');
-    fs.mkdirSync(program.output);
+    shell.mkdir('-p', program.output);
+    // fs.mkdirSync(program.output);
   }
 
   if (program.temp && !fs.existsSync(program.temp)) {

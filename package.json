@@ -1,6 +1,6 @@
 {
   "name": "meteor-electrify",
-  "version": "github:infinity0106/meteor-electrify",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "bin": {
     "electrify": "bin/cli.js"
